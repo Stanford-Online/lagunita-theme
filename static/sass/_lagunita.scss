@@ -328,6 +328,11 @@ $video-thumb-url: '../themes/lagunita/images/stanford-online-video-thumb.png';
     }
 }
 
+// Element styling
+#content .zooming-image-place img {
+    width: 100%;
+}
+
 // Previous and Next arrow styling changes
 #course-content .sequence-bottom {
     width: 220px;
