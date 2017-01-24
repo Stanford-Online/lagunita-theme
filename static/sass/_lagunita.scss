@@ -294,6 +294,10 @@ $video-thumb-url: '../themes/lagunita/images/stanford-online-video-thumb.png';
 
 // Previous and Next arrow styling changes
 #course-content {
+    .sequence .sequence-nav {
+        z-index: 100;
+    }
+
     .sequence-bottom {
         width: 220px;
 
