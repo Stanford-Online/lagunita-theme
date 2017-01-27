@@ -344,6 +344,18 @@ section.introduction h1.sr {
     min-height: 100px;
 }
 
+// Modal styling
+#seq_content .vert-mod {
+    section.modal.staff-modal,
+    section.modal.history-modal {
+        left: 0 !important;
+        top: 0 !important;
+        width: 90% !important;
+        height: 85% !important;
+        margin: 5% !important;
+    }
+}
+
 //-----------------
 // Footer Styling
 //-----------------
