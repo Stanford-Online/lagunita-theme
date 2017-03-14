@@ -4,7 +4,7 @@
   from django.utils.translation import ugettext as _
 %>
 <%namespace name='static' file='/static_content.html'/>
-<%inherit file="/navigation.html"/>
+<%inherit file="navigation.html"/>
 
 ## Toss the Stanford brand bar on top of the page
 <%block name="navigation_top">
@@ -19,7 +19,7 @@
 
 ## TODO: this will eventually be moved to the Sass
 <%block name="navigation_logo">
-  <img src="${static.url('themes/lagunita/images/lagunita-logo.png')}" height="50" alt="${_('{platform_name}, Courses List').format(platform_name='Lagunita')}" />
+  <img src="${static.url('lagunita/images/lagunita-logo.png')}" height="50" alt="${_('{platform_name}, Courses List').format(platform_name='Lagunita')}" />
 </%block>
 
 ## When unauthenticated, only show the about page link
