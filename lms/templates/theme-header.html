@@ -4,6 +4,7 @@
   from django.utils.translation import ugettext as _
 %>
 <%namespace name='static' file='/static_content.html'/>
+<%namespace file='main.html' import="login_query"/>
 <%inherit file="navigation.html"/>
 
 ## Toss the Stanford brand bar on top of the page
@@ -25,17 +26,30 @@
 ## When unauthenticated, only show the about page link
 <%block name="navigation_global_links">
   <li class="nav-global-01">
-    <a href="${marketing_link('ABOUT')}">${_('About')}</a>
+    <a class="btn" href="${marketing_link('ABOUT')}">${_('About')}</a>
   </li>
 </%block>
 
 ## When authenticated, show both the about page and find courses
 <%block name="navigation_global_links_authenticated">
   <li class="nav-global-01">
-    <a href="${marketing_link('ABOUT')}">${_('About')}</a>
+    <a class="btn" href="${marketing_link('ABOUT')}">${_('About')}</a>
   </li>
   <li class="nav-global-02">
-    <a href="${marketing_link('COURSES')}">${_('Find Courses')}</a>
+    <a class="btn" href="/courses">${_('Explore Courses')}</a>
   </li>
+  %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
+    <li class="item">
+      ## Translators: This is short for "System administration".
+      <a class="btn" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
+    </li>
+  %endif
 </%block>
 
+<%block name="navigation_other_global_links">
+  % if not settings.DISABLE_REGISTER_BUTTON:
+    <li class="item nav-global-04">
+      <a class="btn" href="/register${login_query()}">${_("Register")}</a>
+    </li>
+  % endif
+</%block>
