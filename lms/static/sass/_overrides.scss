@@ -251,19 +251,41 @@ $video-thumb-url: '/static/lagunita/images/stanford-online-video-thumb.png';
 }
 
 #global-navigation {
-    .nav-wrapper .user {
-        .primary a {
-            &.user-link {
-                padding: 6px 8px 9px 10px
+    .wrapper-header .user {
+        .primary>a {
+            box-shadow: none;
+            border-top-left-radius: 10%;
+            border-bottom-left-radius: 10%;
+
+            .user-image-frame {
+                margin: 2px;
+            }
+            .label-username {
+                margin: 15px 10px 15px 15px;
             }
         }
-        .primary button {
-            &.dropdown {
+        .primary>.user-menu {
+            padding: 6px;
+            background-color: #D1D5D3;
+            border-top-right-radius: 10%;
+            border-bottom-right-radius: 10%;
+
+            button.dropdown {
                 padding: 1px 10px 6px 10px;
                 background-color: $button-bg-color;
                 border-radius: 0;
-                box-shadow: 0 1px 0 0 rgba(255,255,255, 0.6);
+                box-shadow: none;
                 line-height: 1.6rem;
+            }
+            .dropdown-menu {
+                top: 47px;
+                right: 1px;
+
+                &:before {
+                    top: -6px;
+                    right: 13px;
+                    box-shadow: 1px -1px 0 #c8c8c8;
+                }
             }
         }
     }
