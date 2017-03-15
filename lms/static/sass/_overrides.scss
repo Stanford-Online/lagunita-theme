@@ -67,14 +67,14 @@ $black-t0: rgba($black, .5);
 //  Font Assignment
 //-----------------
 
-$theme-sans-font: 'Source Sans';
+$theme-sans-font: 'Source Sans Pro';
 $sans-serif: $theme-sans-font, $sans-serif;
+$f-sans-serif: $sans-serif;
 $body-font-family: $sans-serif;
 
 $theme-serif-font: 'Crimson Text';
 $serif: $theme-serif-font, $serif;
-
-
+$f-serif: $serif;
 
 
 //-----------------
