@@ -343,13 +343,16 @@ $video-thumb-url: '/static/lagunita/images/stanford-online-video-thumb.png';
 }
 
 // Research Info styling, upstream change styles ul element directly, so slight HAX
-.dashboard .profile-sidebar {
-    border-top: none !important;
-}
+.dashboard {
+    .profile-sidebar {
+        border-top: none !important;
+        margin-top: 25px;
 
-.profile-sidebar .research-info {
-    padding-top: 25px;
-    border-top: 1px solid #999;
+        .research-info {
+            padding: 25px 0 10px 0;
+            border-top: 1px solid #999;
+        }
+    }
 }
 
 .course-sidebar .research-info {
