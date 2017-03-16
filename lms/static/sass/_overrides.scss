@@ -366,6 +366,56 @@ section.introduction h1.sr {
     min-height: 100px;
 }
 
+#main {
+    .container {
+        &.about {
+            padding-top: 80px;
+
+            .photo {
+                box-sizing: border-box;
+                background: #fff;
+                border: 1px solid #d2d2d2;
+                margin-top: 43px;
+                padding: 1px;
+                width: 25%;
+                float: left;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            article {
+                box-sizing: border-box;
+                float: left;
+                padding-left: 20px;
+                width: 75%;
+
+                h1 {
+                    font-family: $serif;
+                    font-size: 1.25em;
+                    border-bottom: 1px solid #c8c8c8;
+                    padding-bottom: 15px;
+                    text-align: left;
+
+                    .lagunita {
+                        text-transform: uppercase;
+                    }
+                }
+
+                dl {
+                    margin-bottom: 40px;
+
+                    dd {
+                        margin-top: 10px;
+                        line-height: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
 //-----------------
 // Footer Styling
 //-----------------

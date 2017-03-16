@@ -172,29 +172,16 @@ html {
             }
 
             &.about {
-                nav#about-menu {
-                    margin-bottom: 35px;
-                    font-size: 1.25em;
+                width: auto;
 
-                    a {
-                        margin: 0 25px;
-                    }
+                .photo {
+                    width: 90%;
+                    margin: 0 5%;
                 }
-                section.vision {
-                    section.message.left {
-                        margin-bottom: 35px;
-                        padding-bottom: 35px;
-
-                        .photo {
-                            width: 90%;
-                            margin: 0 5%;
-                        }
-                        article {
-                            width: 90%;
-                            margin: 5%;
-                            padding-left: 0;
-                        }
-                    }
+                article {
+                    width: 90%;
+                    margin: 5%;
+                    padding-left: 0;
                 }
             }
 
