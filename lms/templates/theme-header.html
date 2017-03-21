@@ -29,27 +29,3 @@
     <a class="btn" href="${marketing_link('ABOUT')}">${_('About')}</a>
   </li>
 </%block>
-
-## When authenticated, show both the about page and find courses
-<%block name="navigation_global_links_authenticated">
-  <li class="nav nav-global-01">
-    <a class="btn" href="${reverse('about')}">${_('About')}</a>
-  </li>
-  <li class="nav nav-global-02">
-    <a class="btn" href="${reverse('courses')}">${_('Courses')}</a>
-  </li>
-  %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
-    <li class="nav nav-global-03">
-      ## Translators: This is short for "System administration".
-      <a class="btn" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
-    </li>
-  %endif
-</%block>
-
-<%block name="navigation_other_global_links">
-  % if not settings.DISABLE_REGISTER_BUTTON:
-    <li class="nav nav-global-04">
-      <a class="btn" href="/register${login_query()}">${_("Register")}</a>
-    </li>
-  % endif
-</%block>
