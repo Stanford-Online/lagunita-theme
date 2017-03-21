@@ -7,17 +7,6 @@
 <%namespace file='main.html' import="login_query"/>
 <%inherit file="navigation.html"/>
 
-## Toss the Stanford brand bar on top of the page
-<%block name="navigation_top">
-  <div id="su-header">
-    <div class="su-container">
-      <a href="http://www.stanford.edu">
-        <img src="https://www.stanford.edu/su-identity/images/brandbar-stanford-logo@2x.png" alt="Stanford University" width="152" height="23">
-      </a>
-    </div>
-  </div>
-</%block>
-
 ## TODO: this will eventually be moved to the Sass
 <%block name="navigation_logo">
   <img src="${static.url('lagunita/images/lagunita-logo.png')}" height="50" alt="${_('{platform_name}, Courses List').format(platform_name='Lagunita')}" />
