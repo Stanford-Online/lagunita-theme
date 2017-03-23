@@ -6,7 +6,6 @@
 %>
 <%namespace name='static' file='/static_content.html'/>
 <%namespace name='theme_settings' file='theme-settings.html'/>
-
 <%
   theme_vars = theme_settings.get_theme_vars()
   effective_date = theme_vars['effective_date']
@@ -22,14 +21,14 @@
       </div>
       <nav class="nav-colophon">
         <ol>
-          <li><a href="${reverse('tos')}">${_('Terms of Service')} <br />
+          <li><a href="${marketing_link('TOS')}">${_('Terms of Service')} <br />
             (${_('Revised {date}').format(date=effective_date)})
           </a></li>
-          <li><a href="${reverse('tos')}#privacy">${_('Privacy Policy')} <br />
+          <li><a href="${marketing_link('PRIVACY')}">${_('Privacy Policy')} <br />
             (${_('Revised {date}').format(date=effective_date)})
           </a></li>
-          <li><a href="${reverse('tos')}#honor">${_('Honor Code')}</a></li>
-          <li><a href="${reverse('tos')}#copyright">${_('Copyright')}</a></li>
+          <li><a href="${marketing_link('HONOR')}">${_('Honor Code')}</a></li>
+          <li><a href="${marketing_link('COPYRIGHT')}">${_('Copyright')}</a></li>
           <li><a href="${marketing_link('CONTACT')}">${_('Contact')}</a></li>
           <li><a href="https://stanfordonline.zendesk.com/hc">${_('Help')}</a></li>
         </ol>
@@ -42,7 +41,6 @@
     </div>
   </footer>
 </div>
-
 <div id="su-footer">
   <div class="su-container">
     <div class="su-row">
