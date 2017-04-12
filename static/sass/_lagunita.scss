@@ -293,33 +293,39 @@ $video-thumb-url: '../themes/lagunita/images/stanford-online-video-thumb.png';
 }
 
 // Previous and Next arrow styling changes
-#course-content .sequence-bottom {
-    width: 220px;
+#course-content {
+    .sequence .sequence-nav {
+        z-index: 100;
+    }
 
-    .sequence-nav-button {
-        width: 110px;
-        text-indent: 0;
-        text-align: center;
-        padding: 8px 10px;
+    .sequence-bottom {
+        width: 220px;
 
-        .icon {
-            position: absolute;
-            top: 16px;
-        }
+        .sequence-nav-button {
+            width: 110px;
+            text-indent: 0;
+            text-align: center;
+            padding: 8px 10px;
 
-        &.button-previous {
-            padding-left: 30px;
-            
             .icon {
-                left: 15px;
+                position: absolute;
+                top: 16px;
             }
-        }
 
-        &.button-next {
-            padding-right: 30px;
+            &.button-previous {
+                padding-left: 30px;
 
-            .icon {
-                right: 15px;
+                .icon {
+                    left: 15px;
+                }
+            }
+
+            &.button-next {
+                padding-right: 30px;
+
+                .icon {
+                    right: 15px;
+                }
             }
         }
     }
