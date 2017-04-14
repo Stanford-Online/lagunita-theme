@@ -300,6 +300,15 @@ $video-thumb-url: '/static/lagunita/images/stanford-online-video-thumb.png';
     li {
         margin-top: 10px;
         
+        a:link, a:visited {
+            padding: 15px 0;
+            text-align: center;
+            cursor: pointer;
+            background: #fff;
+            text-decoration: none;
+            display: block;
+            border: 1px solid #c8c8c8;
+        }
         a.help-modal-button {
             &:link, &:visited {
                 font-family: $sans-serif;
@@ -307,6 +316,10 @@ $video-thumb-url: '/static/lagunita/images/stanford-online-video-thumb.png';
                 background-color: $dark-green;
                 color: $white;
             }
+        }
+        a:hover {
+            background-color: $dark-green;
+            color: $white;
         }
     }
     &:first-child {
