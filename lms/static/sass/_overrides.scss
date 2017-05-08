@@ -30,41 +30,98 @@
 }
 
 #global-navigation {
-    .wrapper-header {
-        .user {
-            .primary>a {
-                box-shadow: none;
-                border-top-left-radius: 10%;
-                border-bottom-left-radius: 10%;
+    &.slim {
+        .wrapper-header {
+            h1.logo {
+                margin: 0 10px 0 0;
+                padding-right: 20px;
 
-                .user-image-frame {
-                    margin: 2px;
-                }
-                .label-username {
-                    margin: 15px 10px 15px 15px;
+                &:before {
+                    content: "";
+                    display: block;
+                    height: 35px;
+                    position: absolute;
+                    top: 0;
+                    right: 3px;
+                    width: 1px;
+                    background-image: -webkit-linear-gradient(#D1D5D3 0%, #D1D5D3);
                 }
             }
-            .primary>.user-menu {
-                padding: 6px;
-                background-color: #D1D5D3;
-                border-top-right-radius: 10%;
-                border-bottom-right-radius: 10%;
+            h2.course-header {
+                display: block;
+                float: left;
+                font-size: 0.9em;
+                font-weight: 600;
+                color: #515553;
+                letter-spacing: 0;
+                margin: 0;
+                margin-top: 9px;
+                text-transform: none;
+                text-shadow: 0 1px 0 #fff;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
 
-                button.dropdown {
-                    padding: 1px 10px 6px 10px;
-                    background-color: $button-bg-color;
-                    border-radius: 0;
+            .list-inline.nav-global {
+                display: none;
+            }
+
+            .user, .wrapper-user-menu {
+                .user-link, .menu-title {
+                    display: inline-block;
+                    background-color: #D1D5D3;
+                    box-sizing: border-box;
                     box-shadow: none;
-                    line-height: 1.6rem;
-                }
-                .dropdown-menu {
-                    top: 47px;
-                    right: 1px;
+                    border-top-left-radius: 10%;
+                    border-bottom-left-radius: 10%;
+                    line-height: 1em;
+                    text-shadow: 0 1px rgba(255,255,255,0.6);
+                    vertical-align: middle;
 
-                    &:before {
-                        top: -6px;
-                        right: 13px;
-                        box-shadow: 1px -1px 0 #c8c8c8;
+                    .user-image-frame, .menu-image {
+                        margin: 2px;
+                        max-width: 40px;
+                        border-radius: 10%;
+                    }
+                    .menu-image {
+                        margin-right: 15px;
+                    }
+                    .label-username {
+                        margin: 15px 10px 15px 15px;
+                    }
+                }
+                .menu-title {
+                    padding-right: 10px;
+                }
+
+                .user-menu  {
+                    display: inline-block;
+                    float: right;
+                    padding: 6px;
+                    background-color: #D1D5D3;
+                    border-top-right-radius: 10%;
+                    border-bottom-right-radius: 10%;
+
+                    button.dropdown, button.menu-button {
+                        padding: 1px 10px 6px 10px;
+                        background-color: $button-bg-color;
+                        border-radius: 0;
+                        box-shadow: none;
+                        line-height: 1.6rem;
+                    }
+                    button.menu-button {
+                        margin-top: 2px;
+                    }
+                    .dropdown-menu {
+                        top: 47px;
+                        right: 1px;
+
+                        &:before {
+                            top: -6px;
+                            right: 13px;
+                            box-shadow: 1px -1px 0 #c8c8c8;
+                        }
                     }
                 }
             }
