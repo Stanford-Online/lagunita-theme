@@ -22,9 +22,20 @@
 
 #register {
     .checkbox-honor_code,
-    .checkbox-terms_of_service {
-        label a {
-            font-weight: bold;
+    .checkbox-terms_of_service,
+    .checkbox-privacy_policy {
+        label {
+            display: inline-block;
+            width: auto;
+            margin: 3px 5px 0 0;
+            vertical-align: top;
+        }
+        .supplemental-link {
+            display: inline-block;
+            vertical-align: top;
+            margin: 3px 0;
+            line-height: 1.5em;
+            font-weight: 700;
         }
     }
 }
